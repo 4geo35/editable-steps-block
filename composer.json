@@ -1,0 +1,27 @@
+{
+    "name": "4geo35/editable-steps-block",
+    "description": "Add steps block",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimir",
+            "email": "aweram-team@yandex.ru"
+        }
+    ],
+    "require": {
+        "4geo35/editable-blocks": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "GIS\\EditableStepsBlock\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GIS\\EditableStepsBlock\\EditableStepsBlockServiceProvider"
+            ]
+        }
+    }
+}
