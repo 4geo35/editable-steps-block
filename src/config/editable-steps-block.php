@@ -9,6 +9,10 @@ return [
         ],
     ],
 
+    "maxTitleLength" => 70,
+    "maxDescriptionLength" => 150,
+    "maxDigit" => 999,
+
     // Admin
     "customStepBlockRecordModel" => null,
     "customStepBlockObserverModel" => null,

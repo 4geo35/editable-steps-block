@@ -24,9 +24,9 @@ class StepsWire extends Component
     public function rules(): array
     {
         return [
-            'title' => ['required', 'string', 'max:70'],
-            "description" => ["required", "string", "max:120"],
-            "number" => ["required", "numeric", "min:0", "max:999"],
+            'title' => ['required', 'string', 'max:' . config('editable-steps-block.maxTitleLength')],
+            "description" => ["required", "string", "max:" . config('editable-steps-block.maxDescriptionLength')],
+            "number" => ["required", "numeric", "min:0", "max:" . config('editable-steps-block.maxDigit')],
         ];
     }
 
