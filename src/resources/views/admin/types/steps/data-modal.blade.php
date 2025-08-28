@@ -29,15 +29,21 @@
             </div>
 
             <div>
-                <label for="stepsDescription-{{ $block->id }}" class="inline-block mb-2">
+                <label for="stepsDescription-{{ $block->id }}" class="flex justify-start items-center mb-2">
                     Описание<span class="text-danger">*</span>
+                    @include("tt::admin.description-button", ["id" => "stepsHidden-{$block->id}"])
                 </label>
-                <input type="text" id="stepsDescription-{{ $block->id }}"
-                       class="form-control {{ $errors->has("description") ? "border-danger" : "" }}"
-                       required maxlength="{{ config('editable-steps-block.maxDescriptionLength') }}"
-                       wire:loading.attr="disabled"
-                       wire:model="description">
-                <x-tt::form.error name="description"/>
+                @include("tt::admin.description-info", ["id" => "stepsHidden-{$block->id}"])
+                <textarea id="stepsDescription-{{ $block->id }}" class="form-control !min-h-52 {{ $errors->has('description') ? 'border-danger' : '' }}"
+                          rows="10" required
+                          wire:model.live="description">
+                        {{ $description }}
+                    </textarea>
+                <x-tt::form.error name="description" />
+
+                <div class="prose prose-sm mt-indent-half">
+                    {!! \Illuminate\Support\Str::markdown($description) !!}
+                </div>
             </div>
 
             <div class="flex items-center space-x-indent-half">

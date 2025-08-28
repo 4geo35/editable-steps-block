@@ -25,7 +25,7 @@ class StepsWire extends Component
     {
         return [
             'title' => ['required', 'string', 'max:' . config('editable-steps-block.maxTitleLength')],
-            "description" => ["required", "string", "max:" . config('editable-steps-block.maxDescriptionLength')],
+            "description" => ["required", "string"],
             "number" => ["required", "numeric", "min:0", "max:" . config('editable-steps-block.maxDigit')],
         ];
     }

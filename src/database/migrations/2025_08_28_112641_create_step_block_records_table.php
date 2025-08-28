@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('step_block_records', function (Blueprint $table) {
             $table->id();
-            $table->string("description")->nullable();
+            $table->text("description")->nullable();
             $table->string("number")->nullable();
             $table->timestamps();
         });

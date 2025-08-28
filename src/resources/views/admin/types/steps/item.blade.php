@@ -4,6 +4,6 @@
     </div>
     <div class="pt-10 pl-10 xs:pt-18 xs:pl-18 z-10">
         <div class="mb-indent font-semibold text-lg xs:text-xl">{{ $item->title }}</div>
-        <div class="text-body/60">{{ $item->recordable->description }}</div>
+        <div class="text-body/60 prose max-w-none">{!! $item->recordable->markdown !!}</div>
     </div>
 </div>
