@@ -4,6 +4,7 @@ namespace GIS\EditableStepsBlock\Livewire\Admin\Types;
 
 use GIS\EditableBlocks\Traits\CheckBlockAuthTrait;
 use GIS\EditableBlocks\Traits\EditBlockTrait;
+use GIS\EditableBlocks\Traits\PlaceholderBlockTrait;
 use GIS\EditableStepsBlock\Interfaces\StepBlockRecordInterface;
 use GIS\EditableStepsBlock\Models\StepBlockRecord;
 use Illuminate\View\View;
@@ -11,7 +12,7 @@ use Livewire\Component;
 
 class StepsWire extends Component
 {
-    use EditBlockTrait, CheckBlockAuthTrait;
+    use EditBlockTrait, CheckBlockAuthTrait, PlaceholderBlockTrait;
 
     public bool $displayData = false;
     public bool $displayDelete = false;
